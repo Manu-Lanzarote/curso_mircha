@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Fazt from "./components/ejemplo_data_un_objeto/Fazt";
+import ArrayObjetos from "./components/ejemplo_array_de_objetos/ArrayObjetos";
 
 function App() {
+  const logo = true;
+  const colores = ["verde", "azoure", "gris"];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <p>{logo ? "Bienvenido" : "No logueado"}</p>
+      <p>{2 + 1}</p>
+      <ul>
+        {colores.map((el, index) => (
+          <li key={index}>{el}</li>
+        ))}
+      </ul>
+      <Fazt />
+      <ArrayObjetos />
+    </>
   );
 }
 
