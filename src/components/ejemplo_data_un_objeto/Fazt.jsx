@@ -8,6 +8,7 @@ const Fazt = () => {
         <div className='fazt'>
             <h1>{fazt.titulo}</h1>
             <p>{fazt.contenido}</p>
+            <span></span>
         </div>
     )
 }
