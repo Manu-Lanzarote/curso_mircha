@@ -1,12 +1,32 @@
-import "./App.css";
 import Fazt from "./components/ejemplo_data_un_objeto/Fazt";
 import ArrayObjetos from "./components/ejemplo_array_de_objetos/ArrayObjetos";
+
+import PruebaProps from "./components/props/PruebaProps";
+
+import { NavLink, Switch, Route } from "react-router-dom";
+
+import WaterEffect from "./components/efecto_agua/WaterEffect";
+import { OverleyZoom } from "./components/efecto_overley_zoom/OverlayZoom";
+import GlassCard from "./components/glassmorphism_cards/GlassCard";
+
+// import PruebaProps2 from "./components/props2/PruebaProps2";
+// import data from "./components/props2/objeto.json";
 
 function App() {
   const logo = true;
   const colores = ["verde", "azoure", "gris"];
   return (
     <>
+      <nav>
+        <NavLink exact to="/">
+          HOME
+        </NavLink>
+        <br />
+        <NavLink to="/fazt">FAZT</NavLink>
+        <br />
+        <NavLink to="/array">ARRAY</NavLink>
+      </nav>
+      <hr />
       <p>{logo ? "Bienvenido" : "No logueado"}</p>
       <p>{2 + 1}</p>
       <ul>
@@ -14,8 +34,21 @@ function App() {
           <li key={index}>{el}</li>
         ))}
       </ul>
-      <Fazt />
-      <ArrayObjetos />
+      <Switch>
+        <Route exact path="/">
+          <PruebaProps />
+        </Route>
+        <Route exact path="/fazt">
+          <Fazt />
+        </Route>
+        <Route exact path="/array">
+          <ArrayObjetos />
+        </Route>
+      </Switch>
+      <WaterEffect />
+      {/* <PruebaProps2 titulo={data.titulo} contenido={data.contenido} /> */}
+      <OverleyZoom />
+      <GlassCard />
     </>
   );
 }
