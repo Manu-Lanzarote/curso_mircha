@@ -5,12 +5,12 @@ import PruebaProps from "./components/props/PruebaProps";
 
 import { NavLink, Switch, Route } from "react-router-dom";
 
-import WaterEffect from "./components/efecto_agua/WaterEffect";
 import { OverleyZoom } from "./components/efecto_overley_zoom/OverlayZoom";
-import GlassCard from "./components/glassmorphism_cards/GlassCard";
 
 // import PruebaProps2 from "./components/props2/PruebaProps2";
 // import data from "./components/props2/objeto.json";
+
+import GlassForm from "./components/login_glass_form/GlassForm";
 
 function App() {
   const logo = true;
@@ -45,10 +45,9 @@ function App() {
           <ArrayObjetos />
         </Route>
       </Switch>
-      <WaterEffect />
       {/* <PruebaProps2 titulo={data.titulo} contenido={data.contenido} /> */}
       <OverleyZoom />
-      <GlassCard />
+      <GlassForm />
     </>
   );
 }
