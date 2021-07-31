@@ -10,7 +10,9 @@ import { OverleyZoom } from "./components/efecto_overley_zoom/OverlayZoom";
 // import PruebaProps2 from "./components/props2/PruebaProps2";
 // import data from "./components/props2/objeto.json";
 
-import GlassForm from "./components/login_glass_form/GlassForm";
+// import GlassForm from "./components/login_glass_form/GlassForm";
+
+import Cookies from "./components/cookies/Cookies";
 
 function App() {
   const logo = true;
@@ -47,7 +49,8 @@ function App() {
       </Switch>
       {/* <PruebaProps2 titulo={data.titulo} contenido={data.contenido} /> */}
       <OverleyZoom />
-      <GlassForm />
+      {/* <GlassForm /> */}
+      <Cookies />
     </>
   );
 }
